@@ -1,0 +1,94 @@
+textarea::placeholder,
+input::placeholder{
+    color:#dbdbdb;
+    font-family: 'Avenir';
+}
+
+input,
+textarea,
+select{
+    font-family: 'Avenir';
+    padding: 10px;
+    font-size: 1rem;
+    border-width: 1px;
+    border-color: #dbdbdb;
+    border-radius: 3px;
+    border-style: solid;
+}
+
+.control-box{
+    display: grid;
+    grid-gap: 10px;
+}
+
+select {
+    padding-right: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../resource/images/down-arrow.svg') no-repeat right center / 35px 11px;
+}
+
+select option[disabled] {
+    color: #dbdbdb;
+}
+
+.file-upload-box{
+    border: 3px dashed #dddddd;
+    padding: 20px 0px;
+    text-align: center;
+    cursor: pointer;
+}
+.file-upload-box span{
+    font-weight: 600;
+}
+.file-upload-box span:first-child{
+    color: #0090ffdb;
+}
+.upload-img{
+    width: 100px;
+    height: 100px;
+}
+.file-info{
+    font-size: 16px;
+    color: #8b8585;
+    margin-bottom: 20px;
+}
+.dot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 7px;
+    left: -35%;
+}
+  
+.dot {
+    width: 5px;
+    height: 5px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #dbdbdb;
+}
+
+@media only screen and (max-width: 760px) {
+    .inactive-stepper{
+        display: none;
+    }
+    .active-stepper button::after {
+        content: "";
+        display: inline-block;
+        border-top: 5px dotted #dbdbdb;
+        position: absolute;
+        top: 33%;
+        right: -20px;
+        width: 50%;
+        z-index: -1;
+    }
+    .active-stepper:last-child button::after{
+        display: none
+    }
+    .active-stepper .MuiStepConnector-active{
+        margin-left: calc(100% - 65%);
+    }
+}
